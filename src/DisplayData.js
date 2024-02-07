@@ -6,7 +6,7 @@ export default function DisplayData(props) {
     <div className="row">
       <div className="col">{props.wordData.phonetic}</div>
       <div className="row">
-        <Meanings data={props.wordData.meanings}  />
+        {props.wordData.meanings && <Meanings data={props.wordData.meanings}  />}
       </div>
     </div>
   );
