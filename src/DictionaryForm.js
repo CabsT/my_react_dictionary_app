@@ -3,9 +3,10 @@ import axios from "axios";
 import DisplayData from "./DisplayData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import "./App.css";
+import "./DictionaryForm.css"
+import "./Meanings.css"
 
-export default function Dictionary() {
+export default function DictionaryForm() {
   const [wordData, setWordData] = useState({});
   const [loaded, setLoaded] = useState(false);
   const [keyword, setKeyword] = useState("");

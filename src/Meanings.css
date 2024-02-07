@@ -1,0 +1,22 @@
+.dictionary, .meaning, .phonetic{
+    background-color:  rgba(206, 160, 206, 0.5);
+}
+.phonetic{
+
+padding-left: 12px;
+padding-right: 12px;
+}
+
+
+p.noun, p.partOfSpeech{
+    color:#e8751a;
+    font-weight: bold;
+}
+
+.synonym{
+  color:  rgb(138, 18, 83);
+}
+
+.example{
+    color: #00464F;
+}
