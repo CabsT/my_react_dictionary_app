@@ -1,0 +1,47 @@
+h1 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 54px;
+}
+
+.container {
+  margin: 150px auto;
+  max-width: 600px;
+  background-color: rgba(250, 244, 255, 0.7);
+  padding: 50px;
+}
+input.search::placeholder{
+    color:  rgb(138, 18, 83);
+
+}
+.search {
+  background-color: rgb(183, 119, 184);
+  height: 36px;
+  line-height: 32px;
+  width: 300px;
+  padding: 1px 2px 1px 10px;
+  outline: none;
+  border: solid 1px rgb(138, 18, 83);
+}
+.searchbtn {
+  background-color: rgb(138, 18, 83);
+  height: 36px;
+  line-height: 32px;
+  border: none;
+}
+.searchbtn:hover{
+    background-color:  rgb(183, 119, 184);
+    border: solid 1px rgb(138, 18, 83);
+
+}
+
+.search-icon{
+    color:#e8751a;
+    
+}
+.dictionary{
+    background-color:  rgba(206, 160, 206, 0.5);
+}
+p.noun{
+    color:#e8751a;
+    font-weight: bold;
+}
