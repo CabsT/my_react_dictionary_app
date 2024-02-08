@@ -2,16 +2,15 @@ h1 {
   font-family: "Roboto Mono", monospace;
   font-size: 54px;
 }
-
 .container {
   margin: 150px auto;
   max-width: 800px;
-  background-color: rgba(250, 244, 255);
+  min-width: 300px;
+  background-color: white;
   padding: 50px;
 }
-input.search::placeholder{
-    color:  rgb(138, 18, 83);
-
+input.search::placeholder {
+  color: rgb(138, 18, 83);
 }
 .search {
   background-color: rgb(183, 119, 184);
@@ -28,13 +27,35 @@ input.search::placeholder{
   line-height: 32px;
   border: none;
 }
-.searchbtn:hover{
-    background-color:  rgb(183, 119, 184);
-    border: solid 1px rgb(138, 18, 83);
-
+.searchbtn:hover {
+  background-color: rgb(183, 119, 184);
+  border: solid 1px rgb(138, 18, 83);
 }
 
-.search-icon{
-    color:#e8751a;
-    
+.search-icon {
+  color: #e8751a;
+}
+
+@media (max-width: 390px) {
+  .container {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 354px) {
+  h1 {
+    font-size: 36px;
+  }
+  .search {
+    width: 150px;
+  }
+  .searchbtn {
+    margin-left: 0 !important;
+  }
+  input.search::placeholder {
+    font-size: 12px;
+  }
+  p{
+    font-size: 14px;
+  }
 }

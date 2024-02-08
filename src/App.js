@@ -8,12 +8,12 @@ import "./App.css";
 function App(){
   return (
     <div className="container rounded">
-      <div className="App">
-        <h1 className="text-center">Dictionary</h1>
+        <div className="heading">
+          <h1 className="text-center">Dictionary</h1>
+        </div>
         <main>
           <Dictionary />
         </main>
-      </div>
     </div>
   );
 }

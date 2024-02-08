@@ -1,6 +1,6 @@
 
 body{
-  background-image: url("../public/images/background.jpg");
+  background: linear-gradient(to right, rgba(238, 234, 250, 0.5), rgba(247, 227, 227, 0.5));
   background-size: cover;
   background-attachment: fixed;
 }

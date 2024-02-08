@@ -1,5 +1,5 @@
-.dictionary, .meaning, .phonetic{
-    background-color:  rgba(206, 160, 206, 0.5);
+.dictionary, .meaning{
+    background-color:  rgba(206, 160, 206, 0.6);
 }
 .phonetic{
 
@@ -8,11 +8,15 @@ padding-right: 12px;
 }
 
 
-p.noun, p.partOfSpeech{
+p.noun, .partOfSpeech{
     color:#e8751a;
     font-weight: bold;
 }
 
+.partOfSpeech{
+    color:#e8751a;
+    font-weight: bold;
+}
 .synonym{
   color:  rgb(138, 18, 83);
 }

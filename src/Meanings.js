@@ -10,20 +10,22 @@ export default function Meanings(props) {
         return (
           <div key={index}>
             <div className="meaning rounded">
-              <p className="partOfSpeech text-center">
-                {meaning.partOfSpeech}
-                
-              </p>
-
-              <p className="definition text-center d-flex justify-content-evenly">
-  
-                {meaning.definition}
-              </p>
+                <p className=" text-center">
+                  <span className="partOfSpeech">{meaning.partOfSpeech} </span>
+                  <br />
+                  <span className="definition text-center d-flex justify-content-evenly">
+                    {" "}
+                    {meaning.definition}
+                  </span>
+                </p>
+          
               <p>
                 {" "}
                 {meaning.example && <Examples example={meaning.example} />}
               </p>
-              <p>{meaning.synonyms && <Synonyms synonym ={meaning.synonyms}/>}</p>
+              <p>
+                {meaning.synonyms && <Synonyms synonym={meaning.synonyms} />}
+              </p>
             </div>
           </div>
         );

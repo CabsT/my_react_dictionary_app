@@ -5,7 +5,12 @@ export default function DisplayData(props) {
   return (
     <div className="row">
       <div>
-        <p className="text-bold phonetic mt-5 text-center"><span className="fw-bold fs-2 d-flex justify-content-center">{props.wordData.word}</span>/{props.wordData.phonetic}/</p>
+        <p className="text-bold phonetic mt-5 text-center">
+          <span className="fw-bold fs-2 d-flex justify-content-center">
+            {props.wordData.word}
+          </span>
+          /{props.wordData.phonetic}/
+        </p>
       </div>
       <div>
         {props.wordData.meanings && <Meanings data={props.wordData.meanings} />}
