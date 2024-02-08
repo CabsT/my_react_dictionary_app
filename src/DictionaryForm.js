@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import DisplayData from "./DisplayData";
+import Images from "./Images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import "./DictionaryForm.css";
@@ -11,6 +12,7 @@ export default function DictionaryForm() {
   const [loaded, setLoaded] = useState(false);
   const [keyword, setKeyword] = useState("");
   const [alertMessage, setAlertMessage] = useState("");
+  const[images, setImages] = useState({});
 
   const api_call = async (e) => {
     e.preventDefault();
@@ -25,13 +27,19 @@ export default function DictionaryForm() {
     const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${apiKey}`;
     const request = axios.get(apiUrl);
     const response = await request;
+    const apiPhotoUrl = `https://api.shecodes.io/images/v1/search?query=${word}&key=${apiKey}`;
+    const photorequest = axios.get(apiPhotoUrl);
+    const photoreponse = await photorequest;
     setLoaded(true);
     setWordData(response.data);
     setKeyword(response.data.word);
+    setImages(photoreponse.data);
     setAlertMessage("");
     console.log(response.data);
   };
-  if (loaded && wordData) {
+
+
+  if (loaded) {
     return (
       <div>
         <form onSubmit={api_call} className="d-flex justify-content-center">
@@ -58,6 +66,9 @@ export default function DictionaryForm() {
 
         <div>
           {wordData && <DisplayData wordData={wordData} keyword={keyword} />}
+        </div>
+        <div>
+          {images && <Images images={images.photos} keyword={keyword} />}
         </div>
       </div>
     );
