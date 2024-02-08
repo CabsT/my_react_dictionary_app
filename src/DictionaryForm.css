@@ -42,7 +42,7 @@ input.search::placeholder {
   }
 }
 
-@media (max-width: 354px) {
+@media (max-width: 359px) {
   h1 {
     font-size: 36px;
   }
