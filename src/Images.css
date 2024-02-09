@@ -1,6 +1,6 @@
 .image-container{
     width: 200px;
-    height: 200px;
+    height: 160px;
     position: relative;
     overflow: hidden;
 }
@@ -8,7 +8,6 @@
 
 .image-container img {
   border-radius: 4px;
-  margin-bottom: 20px;
   width: 200px;
   height: 150px;
   transition: transform 0.3s ease-in-out;
@@ -16,5 +15,45 @@
 
 .image-container:hover img{
     transform: scale(1.2);
+}
+
+@media(max-width: 492px){
+  .image-container{
+    width: 150px;
+    height: 110px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.image-container img {
+  border-radius: 4px;
+  width: 150px;
+  height: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+}
+
+@media(max-width: 391px){
+   .image-container{
+    width: 120px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.image-container img {
+  border-radius: 4px;
+  width: 120px;
+  height: 70px;
+  transition: transform 0.3s ease-in-out;
+}
+.image-container:hover img{
+    transform: scale(1.5);
+}
+
+
 }
 

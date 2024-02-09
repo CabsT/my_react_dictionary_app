@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import axios from "axios";
 import DisplayData from "./DisplayData";
 import Images from "./Images";
+import dict1 from "./photos/dict1.jpg";
+import dict2 from "./photos/dict2.jpg";
+import dict3 from "./photos/dict3.jpg";
+import dict4 from "./photos/dict4.jpg";
+import dict5 from "./photos/dict5.jpg";
+import dict6 from "./photos/dict6.jpg";
+
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import "./DictionaryForm.css";
@@ -12,7 +20,9 @@ export default function DictionaryForm() {
   const [loaded, setLoaded] = useState(false);
   const [keyword, setKeyword] = useState("");
   const [alertMessage, setAlertMessage] = useState("");
-  const[images, setImages] = useState({});
+  const [images, setImages] = useState({});
+  const dictImages = [dict1, dict2, dict3, dict4, dict5, dict6];
+
 
   const api_call = async (e) => {
     e.preventDefault();
@@ -37,7 +47,6 @@ export default function DictionaryForm() {
     setAlertMessage("");
     console.log(response.data);
   };
-
 
   if (loaded) {
     return (
@@ -111,6 +120,19 @@ export default function DictionaryForm() {
             a reference book containing an alphabetical list of words with
             information about them
           </p>
+        </div>
+        <div>
+          <div className="row mt-4 d-flex justify-content-center">
+            {dictImages.map((image, index) => (
+              <div key={index} className="col-md-4 image-container">
+                <img
+                  src={image}
+                  alt="dictionary"
+                  className="img-fluid"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );
