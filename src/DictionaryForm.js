@@ -76,7 +76,7 @@ export default function DictionaryForm() {
             <DisplayData
               wordData={wordData}
               keyword={keyword}
-              setKeyword={setKeyword}
+              setKeyword ={setKeyword}
             />
           )}
         </div>
