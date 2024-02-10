@@ -9,8 +9,8 @@ export default function Meanings(props) {
       {props.data.map(function (meaning, index) {
         return (
           <div key={index}>
-            <div className="meaning rounded">
-                <p className=" text-center">
+            <div className="meaning rounded pt-3">
+                <p className="text-center pb-3">
                   <span className="partOfSpeech">{meaning.partOfSpeech} </span>
                   <br />
                   <span className="definition text-center d-flex justify-content-evenly">

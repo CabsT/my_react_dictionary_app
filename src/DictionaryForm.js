@@ -114,6 +114,13 @@ export default function DictionaryForm() {
         {alertMessage && <div style={{ color: "red" }}>{alertMessage}</div>}
         <div>
           <p className="text-center mt-5 fs-4">
+            <div>
+              <audio
+                controls
+                src="https://api.dictionaryapi.dev/media/pronunciations/en/dictionary-uk.mp3"
+                type="audio/mp3"
+              ></audio>
+            </div>
             <span className="fw-bold">dictionary </span>
             <span className="text-dark text-opacity-75">/'dɪkʃə,nɛri/</span>
           </p>
