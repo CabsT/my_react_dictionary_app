@@ -3,7 +3,7 @@ import "./Meanings.css";
 
 export default function Synonyms(props) {
   return (
-    <div>
+    <div className="meaning rounded my-3">
       {" "}
       <p className="text-center synonym fw-bold mb-0 ">synonym:</p>
       <div className="d-sm-flex justify-content-center text-center">

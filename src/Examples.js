@@ -4,9 +4,9 @@ import "./Meanings.css"
 export default function Examples(props){
 
     return (
-      <div>
+      <div className="meaning rounded my-3">
         {" "}
-        <p className="text-center pb-2">
+        <p className="text-center">
           <span className="example fw-bold">
             example:
             <br />
