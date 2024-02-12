@@ -39,23 +39,25 @@ input.search::placeholder {
 @media (max-width: 420px) {
   .container {
     padding: 25px;
+    margin: 20px auto;
   }
   h1 {
     font-size: 36px;
   }
   .search {
-    width: 140px;
+    width: 150px;
   }
   .searchbtn {
-    margin-left: 0 !important;
+    margin-left: 10px !important;
   }
   input.search::placeholder {
     font-size: 11px;
   }
   p{
-    font-size: 14px;
+    font-size: 15px;
   }
   p.word{
     margin-top: 5px!important;
   }
+  
 }

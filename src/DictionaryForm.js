@@ -140,12 +140,12 @@ export default function DictionaryForm() {
         </form>
         {alertMessage && <div style={{ color: "red",fontSize:"20px",textAlign:"center", fontWeight:"bold"  }}>{alertMessage}</div>}
         <div>
-          <p className="text-center mt-5 fs-4 word">
+          <p className="text-center mt-3 fs-4 word">
             <div>
               <p className=" fs-2 fw-bold phonetic mt-2 text-center">
                 dictionary{" "}
               </p>
-              <p>
+              <p className="word">
                 <FontAwesomeIcon
                   icon={faVolumeHigh}
                   style={{ cursor: "pointer", color: "rgb(138, 18, 83)" }}
@@ -156,7 +156,7 @@ export default function DictionaryForm() {
                   src="https://api.dictionaryapi.dev/media/pronunciations/en/dictionary-uk.mp3"
                   type="audio/mp3"
                 ></audio>
-                <span className="ms-2 text-dark text-opacity-75">
+                <span className="ms-2 text-dark text-opacity-75 phonetic_word">
                   /'dɪkʃə,nɛri/
                 </span>
               </p>
