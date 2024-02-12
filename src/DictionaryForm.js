@@ -140,7 +140,7 @@ export default function DictionaryForm() {
         </form>
         {alertMessage && <div style={{ color: "red",fontSize:"20px",textAlign:"center", fontWeight:"bold"  }}>{alertMessage}</div>}
         <div>
-          <p className="text-center mt-5 fs-4">
+          <p className="text-center mt-5 fs-4 word">
             <div>
               <p className=" fs-2 fw-bold phonetic mt-2 text-center ">
                 dictionary{" "}

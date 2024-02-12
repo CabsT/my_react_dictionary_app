@@ -36,13 +36,10 @@ input.search::placeholder {
   color: #e8751a;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 420px) {
   .container {
     padding: 25px;
   }
-}
-
-@media (max-width: 359px) {
   h1 {
     font-size: 36px;
   }
@@ -53,9 +50,12 @@ input.search::placeholder {
     margin-left: 0 !important;
   }
   input.search::placeholder {
-    font-size: 12px;
+    font-size: 11px;
   }
   p{
     font-size: 14px;
+  }
+  p.word{
+    margin-top: 5px!important;
   }
 }
