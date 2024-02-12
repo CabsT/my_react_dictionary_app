@@ -1,20 +1,18 @@
 import React from "react";
-import "./Images.css"
+import "./Images.css";
 
 export default function Images(props) {
-    console.log(props.images)
+  console.log(props.images);
   return (
     <div className="row mt-4 d-flex justify-content-center ">
-      {props.images.slice(0,6).map(function (image, index) {
+      {props.images.slice(0, 6).map(function (image, index) {
         return (
           <div className="col-4 image-container" key={index}>
-            <a href="/" target="_blank">
-              <img
-                src={image.src.landscape}
-                alt={props.keyword}
-                className="img-fluid"
-              />
-            </a>
+            <img
+              src={image.src.landscape}
+              alt={props.keyword}
+              className="img-fluid"
+            />
           </div>
         );
       })}
