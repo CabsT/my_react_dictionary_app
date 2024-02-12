@@ -142,7 +142,7 @@ export default function DictionaryForm() {
         <div>
           <p className="text-center mt-5 fs-4 word">
             <div>
-              <p className=" fs-2 fw-bold phonetic mt-2 text-center ">
+              <p className=" fs-2 fw-bold phonetic mt-2 text-center">
                 dictionary{" "}
               </p>
               <p>

@@ -16,7 +16,7 @@ export default function DisplayData(props) {
             <Phonetics setKeyword={props.setKeyword} keyword={props.keyword} />
           )}
           {props.wordData.phonetic ? (
-            <span className="ms-2 text-dark text-opacity-75">
+            <span className="ms-2 text-dark text-opacity-75 word">
               /{props.wordData.phonetic}/
             </span>
           ) : (
