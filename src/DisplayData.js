@@ -21,7 +21,7 @@ export default function DisplayData(props) {
             </span>
           ) : (
             <span className="ms-2 text-center fw-bold not_found">
-             Word not found
+             Word not found - Search another word
             </span>
           )}
         </div>

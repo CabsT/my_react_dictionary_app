@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
+import "./DictionaryForm.css";
 
 export default function Phonetics(props) {
   const [phonetics, setPhonetics] = useState({});
@@ -73,6 +74,7 @@ export default function Phonetics(props) {
           icon={faVolumeHigh}
           style={{ cursor: "pointer", color: "rgb(138, 18, 83)" }}
           onClick={playAudio}
+          className="audio"
         />
 
         <audio
@@ -81,7 +83,7 @@ export default function Phonetics(props) {
           type="audio/mp3"
         ></audio>
         {error && (
-          <span className="ps-2" style={{ color: "red", font: "caption" }}>
+          <span className="ps-2" style={{ color: "red", fontSize:"20px", verticalAlign:"middle" }}>
             {error}
           </span>
         )}

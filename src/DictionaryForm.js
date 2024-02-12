@@ -148,8 +148,11 @@ export default function DictionaryForm() {
               <p className="word">
                 <FontAwesomeIcon
                   icon={faVolumeHigh}
-                  style={{ cursor: "pointer", color: "rgb(138, 18, 83)" }}
+                  style={{ cursor: "pointer", color: "rgb(138, 18, 83)", fontSize:"20px" }}
                   onClick={playAudio}
+                
+        
+    
                 />
                 <audio
                   id="yourAudioElementId"

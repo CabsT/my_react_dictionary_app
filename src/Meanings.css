@@ -30,6 +30,7 @@ p.noun, .partOfSpeech{
 
 @media(max-width:420px){
     span.word{
-        font-size: 14px;
+        font-size: 20px;
+        
     }
 }
