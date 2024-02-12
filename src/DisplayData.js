@@ -1,6 +1,7 @@
 import React from "react";
 import Meanings from "./Meanings"
 import Phonetics from "./Phonetics";
+import "./Meanings.css"
 
 
 export default function DisplayData(props) {
@@ -19,8 +20,8 @@ export default function DisplayData(props) {
               /{props.wordData.phonetic}/
             </span>
           ) : (
-            <span className="ms-2 text-danger">
-              Phonetic not available for this word.
+            <span className="ms-2 text-center fw-bold not_found">
+             Word not found
             </span>
           )}
         </div>

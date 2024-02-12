@@ -24,3 +24,7 @@ p.noun, .partOfSpeech{
 .example{
     color: #00464F;
 }
+
+.not_found{
+    color: red;
+}

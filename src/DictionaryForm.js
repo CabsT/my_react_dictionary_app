@@ -56,7 +56,7 @@ export default function DictionaryForm() {
       console.log(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
-      setAlertMessage("An error occurred while fetching data");
+      setAlertMessage("An error occurred while fetching data - Search another word");
       setLoaded(false);
     }
   };
@@ -96,7 +96,7 @@ export default function DictionaryForm() {
             </button>
           </div>
         </form>
-        {alertMessage && <div style={{ color: "red" }}>{alertMessage}</div>}
+        {alertMessage && <div style={{ color: "red", fontSize:"20px",textAlign:"center", fontWeight:"bold" }}>{alertMessage}</div>}
 
         <div>
           {wordData && (
@@ -138,7 +138,7 @@ export default function DictionaryForm() {
             </button>
           </div>
         </form>
-        {alertMessage && <div style={{ color: "red" }}>{alertMessage}</div>}
+        {alertMessage && <div style={{ color: "red",fontSize:"20px",textAlign:"center", fontWeight:"bold"  }}>{alertMessage}</div>}
         <div>
           <p className="text-center mt-5 fs-4">
             <div>
