@@ -2,17 +2,28 @@ import React from "react";
 import Meanings from "./Meanings"
 import Phonetics from "./Phonetics";
 
+
 export default function DisplayData(props) {
   return (
     <div className="row">
       <div>
-        <p className="text-bold phonetic mt-5 text-center">
-          {props.keyword && <Phonetics setKeyword ={props.setKeyword} keyword ={props.keyword}/>}
-          <span className="fw-bold fs-2 d-flex justify-content-center">
-            {props.wordData.word}
-          </span>
-          /{props.wordData.phonetic}/
+        <p className=" fs-2 fw-bold phonetic mt-2 text-center ">
+          {props.wordData.word}
         </p>
+        <div className="d-flex justify-content-center fs-4">
+          {props.keyword && (
+            <Phonetics setKeyword={props.setKeyword} keyword={props.keyword} />
+          )}
+          {props.wordData.phonetic ? (
+            <span className="ms-2 text-dark text-opacity-75">
+              /{props.wordData.phonetic}/
+            </span>
+          ) : (
+            <span className="ms-2 text-danger">
+              Phonetic not available for this word.
+            </span>
+          )}
+        </div>
       </div>
       <div>
         {props.wordData.meanings && <Meanings data={props.wordData.meanings} />}

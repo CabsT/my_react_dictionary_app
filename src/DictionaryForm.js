@@ -11,6 +11,7 @@ import dict6 from "./photos/dict6.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
 import "./DictionaryForm.css";
 import "./Meanings.css";
 
@@ -20,6 +21,7 @@ export default function DictionaryForm() {
   const [keyword, setKeyword] = useState("");
   const [alertMessage, setAlertMessage] = useState("");
   const [images, setImages] = useState({});
+  const [isPlaying, setIsPlaying] = useState(false);
   const dictImages = [dict1, dict2, dict3, dict4, dict5, dict6];
 
   const api_call = async (e) => {
@@ -44,6 +46,18 @@ export default function DictionaryForm() {
     setImages(photoreponse.data);
     setAlertMessage("");
     console.log(response.data);
+  };
+
+  const playAudio = () => {
+    const audioElement = document.getElementById("yourAudioElementId");
+    if (audioElement) {
+      if (isPlaying) {
+        audioElement.pause();
+      } else {
+        audioElement.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
   };
 
   if (loaded) {
@@ -115,14 +129,25 @@ export default function DictionaryForm() {
         <div>
           <p className="text-center mt-5 fs-4">
             <div>
-              <audio
-                controls
-                src="https://api.dictionaryapi.dev/media/pronunciations/en/dictionary-uk.mp3"
-                type="audio/mp3"
-              ></audio>
+              <p className=" fs-2 fw-bold phonetic mt-2 text-center ">
+                dictionary{" "}
+              </p>
+              <p>
+                <FontAwesomeIcon
+                  icon={faVolumeHigh}
+                  style={{ cursor: "pointer", color: "rgb(138, 18, 83)" }}
+                  onClick={playAudio}
+                />
+                <audio
+                  id="yourAudioElementId"
+                  src="https://api.dictionaryapi.dev/media/pronunciations/en/dictionary-uk.mp3"
+                  type="audio/mp3"
+                ></audio>
+                <span className="ms-2 text-dark text-opacity-75">
+                  /'dɪkʃə,nɛri/
+                </span>
+              </p>
             </div>
-            <span className="fw-bold">dictionary </span>
-            <span className="text-dark text-opacity-75">/'dɪkʃə,nɛri/</span>
           </p>
         </div>
         <div className="dictionary rounded">
