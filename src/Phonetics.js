@@ -25,15 +25,35 @@ export default function Phonetics(props) {
   };
 
   function showResponse(response) {
-    const phoneticData = response.data[0].phonetics[1];
-    setPhonetics(phoneticData);
-    if (!phoneticData.audio){
-      setError("No audio available")
-      
-    }
-    console.log(response.data[0].phonetics[1]);
+    if (response.data && response.data.length > 0) {
+      const firstEntry = response.data[0];
 
+      if (firstEntry.phonetics && firstEntry.phonetics.length > 0) {
+        const phoneticData = firstEntry.phonetics[0];
+
+        if (phoneticData.audio) {
+          setPhonetics(phoneticData);
+          setError(null);
+        } else {
+          setError("No audio available");
+        }
+
+        console.log(phoneticData);
+      } else {
+        setError("Phonetic data not found in the response");
+      }
+    } else {
+      setError("No data found in the response");
+    }
   }
+
+
+    
+
+    
+
+      
+  
   useEffect(() => {
     const apiPhonetics = `https://api.dictionaryapi.dev/api/v2/entries/en/${props.keyword}`;
     axios
@@ -54,6 +74,7 @@ export default function Phonetics(props) {
           style={{ cursor: "pointer", color: "rgb(138, 18, 83)" }}
           onClick={playAudio}
         />
+
         <audio
           src={phonetics.audio}
           id="yourAudioElementId"

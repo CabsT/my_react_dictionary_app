@@ -35,17 +35,30 @@ export default function DictionaryForm() {
 
     const apiKey = "f0t6f37fo7eacab2cf93452fbe48b35c";
     const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${apiKey}`;
-    const request = axios.get(apiUrl);
-    const response = await request;
-    const apiPhotoUrl = `https://api.shecodes.io/images/v1/search?query=${word}&key=${apiKey}`;
-    const photorequest = axios.get(apiPhotoUrl);
-    const photoreponse = await photorequest;
-    setLoaded(true);
-    setWordData(response.data);
-    setKeyword(response.data.word);
-    setImages(photoreponse.data);
-    setAlertMessage("");
-    console.log(response.data);
+
+    try {
+      const response = await axios.get(apiUrl);
+
+      if (!response.data || Object.keys(response.data).length === 0) {
+        setAlertMessage(`${word} not found`);
+        setLoaded(false);
+        return;
+      }
+
+      const apiPhotoUrl = `https://api.shecodes.io/images/v1/search?query=${word}&key=${apiKey}`;
+      const photorequest = await axios.get(apiPhotoUrl);
+      const photoreponse = photorequest;
+      setLoaded(true);
+      setWordData(response.data);
+      setKeyword(response.data.word);
+      setImages(photoreponse.data);
+      setAlertMessage("");
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setAlertMessage("An error occurred while fetching data");
+      setLoaded(false);
+    }
   };
 
   const playAudio = () => {
