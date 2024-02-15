@@ -26,7 +26,9 @@ p.noun, .partOfSpeech{
 }
 
 .not_found{
-    color: red;}
+    color: red;
+    font-size: 16px;
+}
 
 @media(max-width:420px){
     span.word{

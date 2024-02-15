@@ -96,7 +96,7 @@ export default function DictionaryForm() {
             </button>
           </div>
         </form>
-        {alertMessage && <div style={{ color: "red", fontSize:"20px",textAlign:"center", fontWeight:"bold" }}>{alertMessage}</div>}
+        {alertMessage && <div style={{ color: "red", fontSize:"14px",textAlign:"center", fontWeight:"bold" }}>{alertMessage}</div>}
 
         <div>
           {wordData && (
@@ -138,7 +138,7 @@ export default function DictionaryForm() {
             </button>
           </div>
         </form>
-        {alertMessage && <div style={{ color: "red",fontSize:"20px",textAlign:"center", fontWeight:"bold"  }}>{alertMessage}</div>}
+        {alertMessage && <div style={{ color: "red",fontSize:"14px",textAlign:"center", fontWeight:"bold"  }}>{alertMessage}</div>}
         <div>
           <p className="text-center mt-3 fs-4 word">
             <div>

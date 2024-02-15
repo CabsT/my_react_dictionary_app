@@ -83,7 +83,7 @@ export default function Phonetics(props) {
           type="audio/mp3"
         ></audio>
         {error && (
-          <span className="ps-2" style={{ color: "red", fontSize:"20px", verticalAlign:"middle" }}>
+          <span className="ps-2" style={{ color: "red", fontSize:"14px", verticalAlign:"middle" }}>
             {error}
           </span>
         )}
